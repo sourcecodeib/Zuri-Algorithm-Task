@@ -11,15 +11,15 @@ const checkType = function(input){
             //  num = Number(input);
             return Number(input);
         } else{
-            console.log(`invalid parameter: ${JSON.stringify(input)}`);
+            return `invalid parameter: ${JSON.stringify(input)}`;
         } // End of string check
 
     }else if(inp === "object" && Array.isArray(input) === true){     // checks if input is ARRAY
-        console.log(`${JSON.stringify(input)} is not a valid number but a/an Array`);
+        return `${JSON.stringify(input)} is not a valid number but a/an Array`;
     }else if(inp === "object" || inp === "boolean"){  // checks if OBJECT
-        console.log(`${JSON.stringify(input)} is not a valid number but a/an ${inp}`);
+        return `${JSON.stringify(input)} is not a valid number but a/an ${inp}`;
     }else{
-        console.log(`${JSON.stringify(input)} is not a valid number but a/an ${inp}`);
+        return`${JSON.stringify(input)} is not a valid number but a/an ${inp}`;
     }
     // return num;
 }
